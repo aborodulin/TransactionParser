@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TransactionParser" GeneratedClassName="Template">
+  <Profiles />
+  <Settings>
+    <Setting Name="Type" Type="System.String" Scope="User">
+      <Value Profile="(Default)">произведена транзакция по оплате</Value>
+    </Setting>
+    <Setting Name="Account" Type="System.String" Scope="User">
+      <Value Profile="(Default)">по Вашей банковской карте ВТБ24</Value>
+    </Setting>
+    <Setting Name="Amount" Type="System.String" Scope="User">
+      <Value Profile="(Default)">произведена транзакция по оплате</Value>
+    </Setting>
+    <Setting Name="Available" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Доступно к использованию</Value>
+    </Setting>
+    <Setting Name="Payee" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Детали платежа: место -</Value>
+    </Setting>
+    <Setting Name="Date" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Сообщаем Вам, что</Value>
+    </Setting>
+    <Setting Name="Time" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Сообщаем Вам, что %DATE% в</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

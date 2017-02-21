@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TransactionParser" GeneratedClassName="Configuration">
+  <Profiles />
+  <Settings>
+    <Setting Name="InputCodePage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UTF-8</Value>
+    </Setting>
+    <Setting Name="MessageLines" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
