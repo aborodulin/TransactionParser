@@ -1,4 +1,7 @@
-﻿namespace TransactionParser
+﻿using System.Configuration;
+using ParserConfiguration;
+
+namespace TransactionParser
 {
     using System;
     using System.Collections.Generic;
@@ -20,7 +23,10 @@
                 return;
             }
 
-            Parser parser = new Parser(Configuration.Default);
+            //args[0] = @"C:\My\test_cutoff.mbox";
+
+            TemplateSection section = ConfigurationManager.GetSection("TemplateGroup/TemplateSection") as TemplateSection;
+            Parser parser = new Parser(section);
 
             List<Transaction> transactions;
             if (parser.TryParse(args[0], out transactions))

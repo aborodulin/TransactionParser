@@ -1,20 +1,22 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using ParserConfiguration;
 using TransactionParser.Entities;
 
 namespace TransactionParser
 {
     internal class Parser
     {
-        public const String Version = "0.1";
+        public const String Version = "0.2";
         /// <summary>
         /// Initializes a new instance of the <see cref="Parser"/> class.
         /// </summary>
         /// <param name="configuration">The configuration.</param>
-        public Parser(Configuration configuration)
+        public Parser(TemplateSection configuration)
         {
             this.Configuration = configuration;
         }
@@ -27,7 +29,7 @@ namespace TransactionParser
         /// <value>
         /// The configuration.
         /// </value>
-        public Configuration Configuration { get; private set; }
+        public TemplateSection Configuration { get; private set; }
 
         #endregion Properties
 
@@ -73,7 +75,7 @@ namespace TransactionParser
 
                     Transaction transaction;
 
-                    if (Transaction.TryParseTransaction(message, out transaction))
+                    if (Transaction.TryParseTransaction(message, this.Configuration.Templates, out transaction))
                     {
                         transactions.Add(transaction);
                         i += this.Configuration.MessageLines;

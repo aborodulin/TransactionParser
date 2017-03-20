@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{93BCD0FE-8FCA-4667-BCC9-DA45EE40BB1B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{E3540342-C482-412C-A9AF-CBF61CA4FF85}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TransactionParser</RootNamespace>
-    <AssemblyName>TransactionParser</AssemblyName>
+    <RootNamespace>ParserConfiguration</RootNamespace>
+    <AssemblyName>ParserConfiguration</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,24 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Transaction.cs" />
-    <Compile Include="Parser.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Extensions\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ParserConfiguration\ParserConfiguration.csproj">
-      <Project>{e3540342-c482-412c-a9af-cbf61ca4ff85}</Project>
-      <Name>ParserConfiguration</Name>
-    </ProjectReference>
+    <Compile Include="TemplateElement.cs" />
+    <Compile Include="TemplateElementCollection.cs" />
+    <Compile Include="TemplateSection.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
